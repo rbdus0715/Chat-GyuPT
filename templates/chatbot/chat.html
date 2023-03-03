@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat-GyuPT</title>
+    <link href="{% static 'img/title_icon.ico' %}" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+
+<body>
+
+    
+    <div class="container" id="chat-container">
+        
+        <div>
+            <div class="chat__header"> 
+                <div class="header__icon">
+                    <a href="{% url 'chatbot:index' %}">
+                        <i class="uil uil-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="header__profile">
+                    <h2>Chat-GyuPT</h2>
+                    <p>AI chat bot</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="chat__body" id="chat-box">
+
+        </div>
+
+        <form class="chat__bottom" method="GET" onsubmit="sendAsk">
+            <input type="text" id="chat-text" placeholder="Type Here" >
+            <div class="chat__send">
+                <button type="submit" id="chat-send" onclick="sendAsk()"><i class="uil uil-location-arrow"></i></button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="{% static 'js/chat.js' %}"></script>
+</body>
+
+</html>
+

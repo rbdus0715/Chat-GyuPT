@@ -1,0 +1,262 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================== CSS & SWIPER ================== -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/swiper-bundle.min.css' %}">
+
+    <!-- ================== ICON ================== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ================== TITLE ================== -->
+    <title>Chat-GyuPT</title>
+    <link href="{% static 'img/title_icon.ico' %}" rel="shortcut icon" type="image/x-icon">
+
+
+</head>
+
+<body>
+    
+
+
+    <!-- ================== HEADER ================== -->
+    <header class="header" id="header">
+
+        <nav class="nav container">
+
+            <!-- 홈버튼 : nav__logo -->
+            <a href="#" class="nav__logo">Chat-GyuPT</a>
+            
+            <!-- 메뉴바 : nav__menu -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-file-search-alt nav__icon"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <i class="uil uil-robot nav__icon"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="https://www.instagram.com/gyuyeon.03/" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i> ContectMe
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <!-- 메뉴 열기 버튼 : nav__btns -->
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================== MAIN ================== -->
+    <main class="main">
+
+        <!-- ####### HOME ####### -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <!-- 컨테이너 안 (1) : home__content -->
+                <div class="home__content grid">
+                    
+                    <div class="home__social">
+                        <a href="https://blog.naver.com/rbdus0715" class="home__social-icon">
+                            <i class="uil uil-user-square"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/gyuyeon.03/" class="home__social-icon">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+
+                        <a href="https://github.com/rbdus0715" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <img class="home__blob" src="{% static 'img/main_logo.png' %}" alt="main-logo">
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            <img style="width: 28px;" src="{% static 'img/chat-logo.png' %}" alt="">
+                            Chat-GyuPT
+                        </h1>
+                        <h3 class="home__subtitle">
+                            by gyuyeon jo
+                        </h3>
+                        <p class="home__description">
+                            “Hello World!” Chat-GyuPT is Korean generate AI model that can response to user’s question. we think still need more development. to be continued...
+                            </p>
+                        <a href="{% url 'chatbot:chat' %}" class="button button--flex">
+                            Let's Start! <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- 컨테이너 안 (2) : home__scroll (없애도 됨)  -->
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll Down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ####### ABOUT ####### -->
+        <section class="about section" id="about">
+            <h2 class="section__title">About</h2>
+            <span class="section__subtitle">How to use</span>
+            
+            <div class="about__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- basic chat-bot -->
+                    <div class="about__content grid swiper-slide">
+                        <img src="{% static 'img/how-use.png' %}" alt="" class="about__img">
+
+                        <div class="about__data">
+                            <h3 class="about__title">Basic chat-bot</h3>
+                            <p class="about__description">
+                                this chat-bot can reply to your question.
+                            </p>
+                            <!-- <a href="https://blog.naver.com/rbdus0715" class="button button--flex button--small about__button">
+                                Detail
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a> -->
+                            <div id="block__block">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- keyword chat-bot -->
+                    <div class="about__content grid swiper-slide">
+                        <img src="{% static 'img/how-use.png' %}" alt="" class="about__img">
+
+                        <div class="about__data">
+                            <h3 class="about__title">Keyword chat-bot</h3>
+                            <p class="about__description">
+                                this chat-bot can find keyword in your sentences.
+                            </p>
+                            <!-- <a href="https://blog.naver.com/rbdus0715" class="button button--flex button--small about__button">
+                                Detail
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a> -->
+                            <div id="block__block">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- add arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-about-icon"></i>
+                </div>                
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-about-icon"></i>
+                </div>
+                <!-- add pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+        <!-- ####### SERVICES ####### -->
+        <section class="services section" id="services">
+            <h2 class="section__title">Service</h2>
+            <span class="section__subtitle">made by gyuyeon</span>
+
+            <div class="services__container container">
+                <div class="services__content grid">
+                    <img src="{% static 'img/mini.png' %}" alt="" class="services__img">
+
+                    <div class="services__data">
+                        hi! i’m Cho Gyuyeon. i’m majoring computer science and engineering in Inha University.
+                        This service is project for practice of “AI chat-bot service”. so i know it is difficult for this chat-bot service to answer all your questions.
+                        but i think it was very nice challenge for me.
+                        GPT means "Generative Pre-trained Transform". and i wanted to make korean version GPT model. the process of making of this web service will be published in my naver blog soon. 
+                        (https://blog.naver.com/rbdus0715)
+                        i hope you injoy this service.
+                        <br>+ thanks to Cho Eunjung who made main logo.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- ================== FOOTER ================== -->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Chat-GyuPT</h1>
+                    <span class="footer__subtitle">Korean generative model</span>
+                </div>
+
+                <ul class="footer__links">
+                    <li>
+                        <a href="#home" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__link">About</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="footer__link">Services</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.facebook.com/profile.php?id=100017934873818" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gyuyeon.03/" target="_blank" class="footer__social">
+                        <i class="uil uil-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <p class="footer__copy">&#169; Bedimcode. All right reserved</p>
+        </div>
+    </footer>
+
+
+
+    <!-- ================== SWIPER JS ================== -->
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    
+    <!-- ================== JS ================== -->
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+
+
+</html>
