@@ -6,7 +6,9 @@
 ## 프로젝트 제자 과정
 [blog](https://blog.naver.com/rbdus0715)
 
+## 챗봇 실행 코드
 ```
+git clone 
 pip install -r requirements.txt
 pip install -r
 ```
