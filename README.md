@@ -10,10 +10,23 @@
 - 저는 miniforge3 환경으로 실행했습니다.
 ```
 git clone https://github.com/rbdus0715/Chat-GyuPT
+
 # window 사용자라면 tensorflow 관련 패키지는 전부 window 용으로 설치하기를 바랍니다.
 pip install -r requirements.txt
-python train.py
-# 
-python manage.py runserver
 
+# nlp 모델 학습된 weight 불러오기
+python train.py
+
+# django 서버 실행 코드
+python manage.py runserver
 ```
+
+## 로컬 배포 방법 (localtunnel) ->> 테스트 서버로 활용
+```
+# localtunnel 글로벌 설치
+npm install -g localtunnel
+
+# 서버 실행
+lt --port [포트 번호 : 8000] --local-host localhost --subdomain [서브 도메인 이름]
+```
+
