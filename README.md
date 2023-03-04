@@ -6,6 +6,6 @@
 ## 프로젝트 제자 과정
 [blog](https://blog.naver.com/rbdus0715)
 
-'''
+''
 pip install
-'''
+''
