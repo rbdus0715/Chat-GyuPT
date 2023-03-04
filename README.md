@@ -7,8 +7,13 @@
 [blog](https://blog.naver.com/rbdus0715)
 
 ## 챗봇 실행 코드
+- 저는 miniforge3 환경으로 실행했습니다.
 ```
-git clone 
+git clone https://github.com/rbdus0715/Chat-GyuPT
+# window 사용자라면 tensorflow 관련 패키지는 전부 window 용으로 설치하기를 바랍니다.
 pip install -r requirements.txt
-pip install -r
+python train.py
+# 
+python manage.py runserver
+
 ```
